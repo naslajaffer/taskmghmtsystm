@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PENDING TASK</title>
+</head>
+<body>
+ <style>
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Pending Task</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Taskname</th>
+    <th>StartDate</th>
+    <th>EndDate</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for val in val %}
+  <tr>
+    <td>{{val.user}}</td>
+    <td><a href="detailedview">{{val.Taskname}}</a></td>
+    <td>{{val.Startdate}}</td>
+    <td>{{val.Duedate}}</td>
+    <td> <button type="submit" href="//{{val.user}}">ADD</button>
+    <button type="submit" href="delete//{{val.id}}">DELETE</button>
+        <button type="submit" href="edit//{{val.id}}">UPDATE</button>
+      {% endfor %}
+      </tbody>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
